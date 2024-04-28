@@ -43,6 +43,50 @@
                             <i class="fa fa-map-marker"></i>
                             AL QASAB , Saudi Arabia
                         </li>
+                        <!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me Form</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        
+        <input type="button" value="Send Message" onclick="sendEmail()">
+    </form>
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "njood0303@gmail.com", // Your email address
+                Password: "n0309010", // Your email password
+                To:"njood0303@gmail.com", // Receiver's email address
+                From:"njood0303@gmail.com",
+                Subject: "Contact Me Form Submission from " + name,
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+            }).then(function (message) {
+                alert("Message sent successfully!");
+                document.getElementById('contactForm').reset(); // Clear the form after sending
+            });
+        }
+    </script>
+</body>
+</html>
                         <h1>Language</h1>
                         <li>
                             <i class="fas fa-language"></i>
@@ -52,6 +96,7 @@
                             <i class="fas fa-language"></i>
                              Arabia
                         </li>
+                        
                     </ul>
                 </div>      
 </html>
@@ -87,6 +132,7 @@
                             <p class="skill-title">html/css</p>
                             <div class="progress-bar">
                                 <div class="progress ps-progress"></div>
+                                
                             </div>
                     </ul>
             </div>
