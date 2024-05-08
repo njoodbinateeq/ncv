@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="text-align: center;">
+    <h3>HEIIO,</h3>
+    <h3>
+        I hope you find my attached CV suitable for your needs. Please feel free to contact me via email
+    <br>      if you have any inquiries or would like to discuss any further details.
+    </h3>
+    <h3>
+        Thank you ,
+    <br><br>
+        NUJUD BIN ATEEQ
+    </h3><br><br>
+</div>
+<div style="text-align: center;">
+    <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+        
+        <input type="button" value="Send Message" onclick="sendEmail()">
+    </form>
+</div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "njood0303@gmail.com", // Your email address
+                Password: "n0309010", // Your email password
+                To: "njood0303@gmail.com", // Receiver's email address
+                From: "njood0303@gmail.com",
+                Subject: "Contact Me Form Submission from " + name,
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+            }).then(function (message) {
+                alert("Message sent successfully ^_^");
+                document.getElementById('contactForm').reset(); // Clear the form after sending
+            });
+        }
+    </script>
+</body>
+</html>
