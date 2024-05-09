@@ -96,6 +96,52 @@ h3{
     padding-top: 3rem;
 }
 
+h5{
+    font-size: 1.1rem;   
+    letter-spacing: 1px;
+    color: #423b3b;
+    padding-top: 3rem;
+    text-align:center;
+}
+
+h6{
+    font-size: 1.2rem;   
+    letter-spacing: 1px;
+    color: #785353;
+    padding-top: 3rem;
+    text-align:center;
+}
+
+header{
+    text-align: center;
+    background-color: #bda7a775;
+    color:#050505b3;
+    padding: 30px;
+}
+
+header{
+    text-align: center;
+    background-color: #bda7a775;
+    color:#050505b3;
+    padding: 30px;
+}
+header h4 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+header p {
+    font-size: 22px;
+   
+}
+footer{
+    text-align: center;
+    background-color: #bda7a775;
+    color:#050505b3;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
 .contact-info ul{
     padding-top: 1rem;
 }
